@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1ec531fe.css",
+    "main.js": "/static/js/main.3ed2b21c.js",
+    "static/media/Geopals.png": "/static/media/Geopals.dca83ff56cab9ceb0485.png",
+    "static/media/DebatetrackYoutube.png": "/static/media/DebatetrackYoutube.3d04a5f3b7f55929996a.png",
+    "static/media/Polibooks.png": "/static/media/Polibooks.ecabd9d474b44d29e7e2.png",
+    "static/media/newsapp.png": "/static/media/newsapp.8e0d7ab260e8981a7a92.png",
+    "static/media/catsapp.png": "/static/media/catsapp.6a290385d0e3b3fa83ff.png",
+    "static/media/birthsdeaths.png": "/static/media/birthsdeaths.b27602b6e3ffe10bc713.png",
+    "static/media/Antdoc.png": "/static/media/Antdoc.dcb2938c3309f74d3949.png",
+    "static/media/standing_squaresm.jpg": "/static/media/standing_squaresm.be2cddbfd79baa7d6730.jpg",
+    "static/media/pora.png": "/static/media/pora.8c417a8995ea06ea947f.png",
+    "static/media/Debatetrack.png": "/static/media/Debatetrack.6f44ad6492840232305d.png",
+    "static/media/resume_Joel_Mounts.pdf": "/static/media/resume_Joel_Mounts.b32b69ec324601025c76.pdf",
+    "static/media/Curtis.jpeg": "/static/media/Curtis.0f7fef212a233690b4e3.jpeg",
+    "static/media/sig.png": "/static/media/sig.0c217701432bf3060a43.png",
+    "static/media/Rich.jpeg": "/static/media/Rich.30b073103a875976031a.jpeg",
+    "static/media/Stephan.jpeg": "/static/media/Stephan.6eeffa8f0ddd0ccaf651.jpeg",
+    "static/media/Jessie.jpeg": "/static/media/Jessie.96e05c19ad2f8d1da7ec.jpeg",
+    "index.html": "/index.html",
+    "main.1ec531fe.css.map": "/static/css/main.1ec531fe.css.map",
+    "main.3ed2b21c.js.map": "/static/js/main.3ed2b21c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ec531fe.css",
+    "static/js/main.3ed2b21c.js"
+  ]
+}
