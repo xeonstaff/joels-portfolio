@@ -15,3 +15,4 @@ I'm really just tryna get hired. Hit me up:
 joelmounts@gmail.com
 
 *update: thanks to ThatAPICompany for partially-fulfilling my dream; still looking for full-time work!
+**update 2: thanks to Stratacache for employing me for a full year. The search is on, yet again.

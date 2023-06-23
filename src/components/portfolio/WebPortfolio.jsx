@@ -1,37 +1,58 @@
 import React from 'react'
 import './portfolio.css'
-import IMG1 from '../../assets/projects/birthsdeaths.png'
-import IMG2 from '../../assets/projects/newsapp.png'
-import IMG3 from '../../assets/projects/catsapp.png'
+import IMG1 from '../../assets/projects/tempfriend.png'
+import IMG2 from '../../assets/projects/cattinder.png'
+import IMG3 from '../../assets/projects/historicalevents.png'
+import IMG4 from '../../assets/projects/petowners.png'
+import IMG5 from '../../assets/projects/newssite.png'
 
 const data = [
   {
     id: 1,
     image: IMG1,
-    title: 'Historical Events',
-    category: 'web dev - education',
-    tech: 'React, Material UI, Firebase, Toastify',
-    github: 'https://github.com/xeonstaff/react-births-and-deaths',
-    demo: 'https://births-and-deaths.herokuapp.com/'
+    title: 'Temporary Friend',
+    category: 'web dev - AI',
+    tech: 'SvelteKit, Svelte UI, OpenAI API',
+    github: 'https://github.com/xeonstaff/tempfriend',
+    demo: 'https://tempfriend-ay7fpl9yv-xeonstaff.vercel.app/'
   },
   {
     id: 2,
     image: IMG2,
-    title: 'News Display & Search',
-    category: 'web dev - news',
-    tech: 'React, APIs, Material UI',
-    github: 'https://github.com/xeonstaff/react-newsfeed',
-    demo: 'https://newsfeed-react.herokuapp.com/'
+    title: 'Tinder for Cats',
+    category: 'web dev - entertainment',
+    tech: 'React, React-Icons, APIs',
+    github: 'https://github.com/xeonstaff/react_tinder_for_cats',
+    demo: 'https://react-tinder-for-cats-7k6i87286-xeonstaff.vercel.app/'
   },
   {
     id: 3,
     image: IMG3,
+    title: 'Historical Events',
+    category: 'web dev - education',
+    tech: 'React, Material UI, Firebase, Toastify',
+    github: 'https://github.com/xeonstaff/react-births-and-deaths',
+    demo: 'https://react-births-and-deaths-o3xbe3rz1-xeonstaff.vercel.app/births'
+  },
+  {
+    id: 4,
+    image: IMG4,
     title: 'Pet Owners',
     category: 'web dev - entertainment',
     tech: 'React, APIs, Material UI, custom CSS',
     github: 'https://github.com/xeonstaff/react-cat-app',
-    demo: 'http://cat-pix.herokuapp.com/'
+    demo: 'https://react-cat-app-lilac.vercel.app/'
   },
+  {
+    id: 5,
+    image: IMG5,
+    title: 'News Display & Search',
+    category: 'web dev - news',
+    tech: 'React, APIs, Material UI',
+    github: 'https://github.com/xeonstaff/react-newsfeed',
+    demo: 'https://react-newsfeed-d2qx.vercel.app/'
+  },
+
 ]
 
 
