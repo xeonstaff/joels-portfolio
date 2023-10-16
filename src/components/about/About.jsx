@@ -21,7 +21,7 @@ const About = () => {
             <article className="about__card">
               <SiPolywork className='about__icon' />
               <h5>Experience</h5>
-              <small>10+ years</small>
+              <small>1.5</small>
             </article>
             <article className="about__card">
               <IoMdGitNetwork className='about__icon' />
@@ -35,13 +35,15 @@ const About = () => {
             </article>
           </div>
           <p>
-            I'm a Front-end Web Developer with 10+ years experience in education 
-            and business development who aims to bring fully-integrated
-            web experiences to businesses and customers. 
+            My work focuses on frontend web and app development across
+            Vue, Svelte, and React (like this site!) projects. I currently work at 
+             <b> Stratacache</b> in Dayton, OH, developing menu boards for high-ticket clients
+            like Tim Horton's, Taco Bell and McDonalds.
           </p>
           <p>
-            A strong tech & science background gives me an analytical footing
-            to measure & improve key buiness metrics through web design.
+            In addition to tech proficiencies, I bring a broad array of experience including
+            a strong science education, a career in teaching, overseas Asian experience,
+            and social media chops in running a #1 in-niche Youtube channel.
           </p>
           <a href="#contact" className='btn btn-primary'>Let's Talk</a>
         </div>

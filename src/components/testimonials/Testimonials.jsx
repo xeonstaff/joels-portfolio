@@ -1,9 +1,9 @@
 import React from 'react'
 import './testimonials.css'
+import Josh from '../../assets/Josh.jpeg'
 import Jessie from '../../assets/Jessie.jpeg'
 import Rich from '../../assets/Rich.jpeg'
 import Stephan from '../../assets/Stephan.jpeg'
-import Curtis from '../../assets/Curtis.jpeg'
 
 // import Swiper core and required modules
 import { Pagination } from 'swiper';
@@ -14,6 +14,12 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 const data = [
+  {
+    avatar: Josh,
+    name: 'Josh Genereux',
+    title: 'Software Developer',
+    review: 'Joel is a dedicated and dynamic team player with a wealth of life experience that enhances the office culture. I have had the pleasure of working alongside him for more for around a year, and during this period, I witnessed firsthand his work ethic and enthusiasm for front end development. Joel consistently delivered quality code, and even offering to work on weekends, to ensure our project gets released on time and bug free. He is a dependable worker and genuinely improves our team. What sets Joel apart is not just his development skills, but also his ability to get along with, and make friends with everyone who he is around. With his diverse background of other countries, cultures and a divergent career before programming, Joel brings a unique perspective to the team. He is welcoming and congenial, and his ability to make worthwhile connections improves the office culture and makes even the most tedious days of coding more bearable. I have no doubt that Joel\'s enthusiasm, work ethic, and interpersonal skills would make him an invaluable asset to your team.Overall, I would recommend Joel for any organization in need of an addition to their team. His skills dedication and interpersonal skills make him a great addition to any team. I have enjoyed working alongside Joel and am sure he will make a great addition to any team.'
+  },
   {
     avatar: Jessie,
     name: 'Jessie Chen',
@@ -31,13 +37,7 @@ const data = [
     name: 'Stephan Vogel',
     title: 'Publisher & Digital Marketer',
     review: "I was very happy to work with Joel, as he is an excellent communicator, critical thinker and creative problem solver that picked up everything I had to contribute to his overall marketing and launch strategy quickly. Seeing how fast and efficient he applied my 2 cents, combined with excellent communication skills, and seeing the end result Joel produced, I’m confident to state that his professional's ability to work, adapt and deliver result is top notch. His flawless career change to code developer confirms that. On a final note, Joel is a social outgoing person and a giver who always considers the well- being of others.This makes him a great person to be around, both in a professional and personal context.I believe this makes Joel a valuable addition to your team, and as a marketing professional who has worked and communicated with dozens of freelancers and clients, I strongly recommend him for any position he qualifies for."
-  },
-  {
-    avatar: Curtis,
-    name: 'Curtis Durham',
-    title: 'Collections Manager',
-    review: 'There are few people with the same confidence, diversity of expertise, and global perspective as Joel. I have known Mr. Mounts for nearly two decades and have relied on him countless times for advice on education and student training, brand marketing, proofs of concept, project management, and presentation skills, among other topics. The most recent project in which we engaged was a small, coding pet-project and I could not be more pleased with the outcome. Joel does not take half measures: his dedication to a project is without equal and never stops revising until the best possible outcome is produced. If one is looking for a passionate and well-informed individual to participate in or head a project that requires flexible collaboration with time-sensitive deliverables, Mr. Mounts is the content developer I recommend.'
-  },
+  }
 ]
 
 

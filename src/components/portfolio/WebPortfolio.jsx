@@ -4,7 +4,6 @@ import IMG1 from '../../assets/projects/tempfriend.png'
 import IMG2 from '../../assets/projects/cattinder.png'
 import IMG3 from '../../assets/projects/historicalevents.png'
 import IMG4 from '../../assets/projects/petowners.png'
-import IMG5 from '../../assets/projects/newssite.png'
 
 const data = [
   {
@@ -14,7 +13,7 @@ const data = [
     category: 'web dev - AI',
     tech: 'SvelteKit, Svelte UI, OpenAI API',
     github: 'https://github.com/xeonstaff/tempfriend',
-    demo: 'https://tempfriend-2h3uv3noo-xeonstaff.vercel.app/'
+    demo: 'https://tempfriend-c6vfjwe74-xeonstaff.vercel.app/'
   },
   {
     id: 2,
@@ -42,17 +41,7 @@ const data = [
     tech: 'React, APIs, Material UI, custom CSS',
     github: 'https://github.com/xeonstaff/react-cat-app',
     demo: 'https://react-cat-app-lilac.vercel.app/'
-  },
-  {
-    id: 5,
-    image: IMG5,
-    title: 'News Display & Search',
-    category: 'web dev - news',
-    tech: 'React, APIs, Material UI',
-    github: 'https://github.com/xeonstaff/react-newsfeed',
-    demo: 'https://react-newsfeed-d2qx.vercel.app/'
-  },
-
+  }
 ]
 
 
