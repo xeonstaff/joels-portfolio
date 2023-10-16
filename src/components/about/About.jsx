@@ -21,7 +21,7 @@ const About = () => {
             <article className="about__card">
               <SiPolywork className='about__icon' />
               <h5>Experience</h5>
-              <small>1.5</small>
+              <small>2 years</small>
             </article>
             <article className="about__card">
               <IoMdGitNetwork className='about__icon' />
@@ -41,9 +41,13 @@ const About = () => {
             like Tim Horton's, Taco Bell and McDonalds.
           </p>
           <p>
-            In addition to tech proficiencies, I bring a broad array of experience including
-            a strong science education, a career in teaching, overseas Asian experience,
-            and social media chops in running a #1 in-niche Youtube channel.
+          In addition to tech proficiencies, I bring a broad array of experience:
+          </p>
+          <p className="about__content-skills">
+          •<b> science education:</b> biopsychology bs + chem engineering <br />
+          •<b> educator:</b> 10 years teaching language & research<br />
+          •<b> Asia experience:</b> 8 years in China + Taiwan<br />
+          •<b> social media:</b> operator of #1 in-niche Youtube channel<br />
           </p>
           <a href="#contact" className='btn btn-primary'>Let's Talk</a>
         </div>
