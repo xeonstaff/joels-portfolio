@@ -13,7 +13,7 @@ const data = [
     category: 'web dev - AI',
     tech: 'SvelteKit, Svelte UI, OpenAI API',
     github: 'https://github.com/xeonstaff/tempfriend',
-    demo: 'https://tempfriend-c6vfjwe74-xeonstaff.vercel.app/'
+    demo: 'https://tempfriend.vercel.app/'
   },
   {
     id: 2,

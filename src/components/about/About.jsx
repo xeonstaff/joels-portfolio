@@ -44,10 +44,10 @@ const About = () => {
           In addition to tech proficiencies, I bring a broad array of experience:
           </p>
           <p className="about__content-skills">
-          •<b> science education:</b> biopsychology bs + chem engineering <br />
-          •<b> educator:</b> 10 years teaching language & research<br />
-          •<b> Asia experience:</b> 8 years in China + Taiwan<br />
-          •<b> social media:</b> operator of #1 in-niche Youtube channel<br />
+            •<b> science education:</b> biopsychology bs + chem engineering <br />
+            •<b> educator:</b> 10 years teaching language & research<br />
+            •<b> Asia experience:</b> 8 years in China + Taiwan<br />
+            •<b> social media:</b> operator of #1 in-niche Youtube channel<br />
           </p>
           <a href="#contact" className='btn btn-primary'>Let's Talk</a>
         </div>
