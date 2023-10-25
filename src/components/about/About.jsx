@@ -1,6 +1,7 @@
 import React from 'react'
 import './about.css'
 import ME2 from '../../assets/standing_squaresm.jpg'
+import AWSCERT from '../../assets/awscert.png'
 import { SiPolywork } from 'react-icons/si'
 import { IoMdGitNetwork } from 'react-icons/io'
 import { BiFolderPlus } from 'react-icons/bi'
@@ -33,12 +34,15 @@ const About = () => {
               <h5>Projects</h5>
               <small>20+</small>
             </article>
+            <article className="about__card">
+              <img src={AWSCERT} />
+            </article>
           </div>
           <p>
             My work focuses on frontend web and app development across
             Vue, Svelte, and React (like this site!) projects. I currently work at 
-             <b> Stratacache</b> in Dayton, OH, developing menu boards for high-ticket clients
-            like Tim Horton's, Taco Bell and McDonalds.
+             <b> Stratacache</b> in Dayton, OH, developing Vue menu boards for high-ticket clients
+            like Tim Horton's, Taco Bell and McDonalds. I hold an <b>AWS Solutions Architect</b> (associate) certification.
           </p>
           <p>
           In addition to tech proficiencies, I bring a broad array of experience:
