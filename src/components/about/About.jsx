@@ -22,12 +22,7 @@ const About = () => {
             <article className="about__card">
               <SiPolywork className='about__icon' />
               <h5>Experience</h5>
-              <small>2 years</small>
-            </article>
-            <article className="about__card">
-              <IoMdGitNetwork className='about__icon' />
-              <h5>Industries</h5>
-              <small>3</small>
+              <small>2+ years</small>
             </article>
             <article className="about__card">
               <BiFolderPlus className='about__icon' />
@@ -41,14 +36,14 @@ const About = () => {
           <p>
             My work focuses on frontend web and app development across
             Vue, Svelte, and React (like this site!) projects. I currently work at 
-             <b> Stratacache</b> in Dayton, OH, developing Vue menu boards for high-ticket clients
-            like Tim Horton's, Taco Bell and McDonalds. I hold an <b>AWS Solutions Architect</b> (associate) certification.
+             <b> Rove IQ</b> out of Covington, KY, developing digital map signs for smart navigation. 
+            I hold an <b>AWS Solutions Architect</b> (associate) certification.
           </p>
           <p>
           In addition to tech proficiencies, I bring a broad array of experience:
           </p>
           <p className="about__content-skills">
-            •<b> science education:</b> biopsychology bs + chem engineering <br />
+            •<b> science education:</b> biopsychology bs + lab experience (psych / chem) <br />
             •<b> educator:</b> 10 years teaching language & research<br />
             •<b> Asia experience:</b> 8 years in China + Taiwan<br />
             •<b> social media:</b> operator of #1 in-niche Youtube channel<br />
