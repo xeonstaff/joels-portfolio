@@ -39,13 +39,13 @@ const About = () => {
             And importantly, with using marketing to drive attention to those projects.
           </p>
           <p className="about__content-skills">
-            What's working now in marketing:<br/>
+            Here's what's working now in marketing:<br/>
             •<b> podcast-as-lead gen: </b> people say no to sales meetings.<br/><i>they <u>don't</u> say no to podcasts.</i><br/><br/>
             •<b> click-to-message Meta ads:</b> every lead is a real conversation with a customer.<br /><i>or a confused grandma who can't figure out how to close the chat.</i><br/><br/>
             •<b> ogranic social:</b> I don't think this will always be free. But it is now.<br />
           </p>
           <p>
-            Open to conversations about driving growth through smart digital marketing.
+            <b>I can help you drive growth through smart digital marketing.</b>
           </p>
           <a href="#contact" className='btn btn-primary'>Let's Talk</a>
         </div>
