@@ -34,7 +34,7 @@ const data = [
 
 const Portfolio = () => {
   return (
-    <section id='portfolio'>
+    <section id='graveyard'>
       <h5>Past Work</h5>
       <h2>Project Graveyard</h2>
 
