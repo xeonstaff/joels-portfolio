@@ -1,10 +1,9 @@
 import React from 'react'
 import './about.css'
 import ME2 from '../../assets/standing_squaresm.jpg'
-import AWSCERT from '../../assets/awscert.png'
-import { SiPolywork } from 'react-icons/si'
-import { IoMdGitNetwork } from 'react-icons/io'
-import { BiFolderPlus } from 'react-icons/bi'
+import { LuGraduationCap } from 'react-icons/lu'
+import { RiMegaphoneLine } from 'react-icons/ri'
+import { IoTerminalOutline } from 'react-icons/io5'
 
 const About = () => {
   return (
@@ -20,33 +19,33 @@ const About = () => {
         <div className="about__content">
           <div className="about__cards">
             <article className="about__card">
-              <SiPolywork className='about__icon' />
-              <h5>Experience</h5>
-              <small>2+ years</small>
+              <LuGraduationCap className='about__icon' />
+              <h5>Education</h5>
+              <small>12+ years</small>
             </article>
             <article className="about__card">
-              <BiFolderPlus className='about__icon' />
-              <h5>Projects</h5>
-              <small>20+</small>
+              <RiMegaphoneLine className='about__icon' />
+              <h5>Marketing</h5>
+              <small>5+ years</small>
             </article>
             <article className="about__card">
-              <img src={AWSCERT} />
+            <IoTerminalOutline className='about__icon' />
+              <h5>Tech</h5>
+              <small>3 years</small>
             </article>
           </div>
           <p>
-            My work focuses on frontend web and app development across
-            Vue, Svelte, and React (like this site!) projects. I currently work at 
-             <b> Rove IQ</b> out of Covington, KY, developing digital map signs for smart navigation. 
-            I hold an <b>AWS Solutions Architect</b> (associate) certification.
-          </p>
-          <p>
-          In addition to tech proficiencies, I bring a broad array of experience:
+            I'm into improving education with tech.<br/>
+            And importantly, with using marketing to drive attention to those projects.
           </p>
           <p className="about__content-skills">
-            •<b> science education:</b> biopsychology bs + lab experience (psych / chem) <br />
-            •<b> educator:</b> 10 years teaching language & research<br />
-            •<b> Asia experience:</b> 8 years in China + Taiwan<br />
-            •<b> social media:</b> operator of #1 in-niche Youtube channel<br />
+            What's working now in marketing:<br/>
+            •<b> podcast-as-lead gen: </b> people say no to sales meetings.<br/><i>they <u>don't</u> say no to podcasts.</i><br/><br/>
+            •<b> click-to-message Meta ads:</b> every lead is a real conversation with a customer.<br /><i>or a confused grandma who can't figure out how to close the chat.</i><br/><br/>
+            •<b> ogranic social:</b> I don't think this will always be free. But it is now.<br />
+          </p>
+          <p>
+            Open to conversations about driving growth through smart digital marketing.
           </p>
           <a href="#contact" className='btn btn-primary'>Let's Talk</a>
         </div>

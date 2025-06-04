@@ -1,46 +1,35 @@
 import React from 'react'
 import './portfolio.css'
-import IMG1 from '../../assets/projects/tempfriend.png'
-import IMG2 from '../../assets/projects/cattinder.png'
-import IMG3 from '../../assets/projects/historicalevents.png'
-import IMG4 from '../../assets/projects/petowners.png'
+import debatetrack from '../../assets/projects/debatetrack.png'
+import daobloom from '../../assets/projects/daobloom.png'
+import ds from '../../assets/projects/ds.png'
 
 const data = [
   {
     id: 1,
-    image: IMG1,
-    title: 'Temporary Friend',
-    category: 'web dev - AI',
-    tech: 'SvelteKit, Svelte UI, OpenAI API',
-    github: 'https://github.com/xeonstaff/tempfriend',
-    demo: 'https://tempfriend.vercel.app/'
+    image: debatetrack,
+    title: 'Debatetrack',
+    role: 'owner & operator',
+    description: 'A leading resource company for High School debate clubs. Youtube top-of-funnel. Email newsletter with 50% open rates for years.',
+    website: 'https://www.debatetrack.com/',
+    youtube: 'https://www.youtube.com/debatetrack'
   },
   {
     id: 2,
-    image: IMG2,
-    title: 'Tinder for Cats',
-    category: 'web dev - entertainment',
-    tech: 'React, React-Icons, APIs',
-    github: 'https://github.com/xeonstaff/react_tinder_for_cats',
-    demo: 'https://react-tinder-for-cats-7k6i87286-xeonstaff.vercel.app/'
+    image: daobloom,
+    title: 'Daobloom',
+    role: 'owner & operator',
+    description: 'A new education brand targeted at finding high-paying, high-impact jobs for High School students. Current focus is viral short-form and conversation Meta ads.',
+    website: 'https://www.daobloom.io/',
+    youtube: 'https://www.youtube.com/@daobloom'
   },
   {
     id: 3,
-    image: IMG3,
-    title: 'Historical Events',
-    category: 'web dev - education',
-    tech: 'React, Material UI, Firebase, Toastify',
-    github: 'https://github.com/xeonstaff/react-births-and-deaths',
-    demo: 'https://react-births-and-deaths-o3xbe3rz1-xeonstaff.vercel.app/births'
-  },
-  {
-    id: 4,
-    image: IMG4,
-    title: 'Pet Owners',
-    category: 'web dev - entertainment',
-    tech: 'React, APIs, Material UI, custom CSS',
-    github: 'https://github.com/xeonstaff/react-cat-app',
-    demo: 'https://react-cat-app-lilac.vercel.app/'
+    image: ds,
+    title: "D's Barbershop",
+    role: 'webmaster',
+    description: "Dayton's premiere barbershop. \n Truly, the finest barbershop in the area.",
+    website: 'https://dsbarbershop.com/'
   }
 ]
 
@@ -48,24 +37,27 @@ const data = [
 const Portfolio = () => {
   return (
     <section id='portfolio'>
-      <h5>My Recent Work</h5>
-      <h2>Web Development</h2>
+      <h5>Recent Work</h5>
+      <h2>Current Projects</h2>
 
       <div className="container portfolio__container">
         {
-          data.map(({ id, image, title, tech, github, demo }) => {
+          data.map(({ id, image, title, role, description, youtube, website }) => {
             return (
               <article key={id} className='portfolio__item'>
                 <div className="portfolio__item-image">
                   <img src={image} alt={title} />
                 </div>
-                <h3 className="porth3">{title}</h3>
+                <div className="title-subtitle">
+                  <h3 className="porth3">{title}</h3>
+                  <p className="porth3">{role}</p>
+                </div>
                 <div className="scope">
-                  <p>{tech}</p>
+                  <p>{description}</p>
                 </div>
                 <div className="portfolio__item-cta">
-                  <a href={github} className='btn' target='_blank'>Github</a>
-                  <a href={demo} className='btn btn-primary' target='_blank'>Live Demo</a>
+                  <a href={website} className='btn' target='_blank'>Website</a>
+                 {youtube && <a href={youtube} className='btn btn-primary' target='_blank'>Youtube</a>}
                 </div>
               </article>
             )

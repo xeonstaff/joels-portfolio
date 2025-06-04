@@ -61,7 +61,7 @@ header {
 }
 
 .me img {
-    height: 60vh;
+    height: 50vh;
     margin-left: 2vh;
 }
 
@@ -114,3 +114,74 @@ header {
         gap: 1rem;
     }
 }
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    max-height: 80vh;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 100;
+    cursor: pointer;
+  }
+  
+  .arrow.left {
+    left: 16px;
+  }
+  
+  .arrow.right {
+    right: 16px;
+  }
+  
+  .dots {
+    position: absolute;
+    bottom: 16px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 100;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: white;
+  }
+  
+  @media (min-width: 768px) {
+    .hero-container {
+      height: 80vh;
+    }
+  }
+  

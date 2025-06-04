@@ -26,10 +26,28 @@
     margin: 1.2rem 0 0 0;
 }
 
+.scope {
+    height: 5rem; /* Adjust to fit 2 lines of text cleanly */
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+  }
+
 .scope>p{
     font-weight: 100;
     font-size: 12px;
     margin-bottom: 1rem;
+    white-space: pre-line;
+}
+
+.title-subtitle{
+    line-height: 2px;
+    margin-bottom: 1.2rem;
+}
+.title-subtitle>p{
+    font-size: 14px;
+    font-weight: 100;
+    font-style: italic;
 }
 
 .portfolio__item-cta {
