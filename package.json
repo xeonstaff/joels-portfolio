@@ -12,12 +12,17 @@
     "emailjs-com": "^3.2.0",
     "gh-pages": "^4.0.0",
     "lucide-react": "^0.511.0",
+    "path": "^0.12.7",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-icons": "^4.12.0",
+    "react-image-lightbox": "^5.1.4",
+    "react-masonry-css": "^1.0.16",
+    "react-router-dom": "^7.6.3",
     "react-scripts": "5.0.1",
     "swiper": "^8.2.2",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yet-another-react-lightbox": "^3.24.0"
   },
   "scripts": {
     "predeploy": "npm run build",

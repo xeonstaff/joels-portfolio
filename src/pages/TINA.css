@@ -1,0 +1,46 @@
+.my-masonry-grid {
+    display: -webkit-box; /* Not needed if using postcss/autoprefixer */
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: -16px; /* gutter size offset */
+    width: auto;
+  }
+  
+  .my-masonry-grid_column {
+    padding-left: 16px; /* gutter size */
+    background-clip: padding-box;
+  }
+  
+  /* Style individual items (images) */
+  .my-masonry-grid_column > img {
+    margin-bottom: 16px;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .my-masonry-grid_column > img:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+.title{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.subtitle{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-top: -10px;
+    font-size: 14px;
+}
+
+.ReactModal__Content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
