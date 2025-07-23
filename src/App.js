@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import TINA from './pages/TINA';
+import Portraits from './pages/Portraits';
 
 import Header from './components/header/Header'
 import Nav from './components/nav/Nav'
@@ -32,6 +33,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tina" element={<TINA />} />
+        <Route path="/portraits" element={<Portraits />} />
       </Routes>
     </Router>
   )
