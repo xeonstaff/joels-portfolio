@@ -1,6 +1,6 @@
 .portfolio__container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
 }
 
@@ -27,21 +27,19 @@
 }
 
 .scope {
-    height: 5rem; /* Adjust to fit 2 lines of text cleanly */
-    overflow: hidden;
-    display: flex;
-    align-items: flex-start;
-  }
+  display: block;       /* default block behavior is fine */
+  margin-bottom: 1rem;  /* spacing */
+}
 
-.scope>p{
-    font-weight: 100;
-    font-size: 12px;
-    margin-bottom: 1rem;
-    white-space: pre-line;
+.scope > p {
+  font-weight: 100;
+  font-size: 12px;
+  white-space: normal;  /* allow natural wrapping */
+  margin: 0;            /* reset margins */
 }
 
 .title-subtitle{
-    line-height: 2px;
+    line-height: 1.2;
     margin-bottom: 1.2rem;
 }
 .title-subtitle>p{
@@ -50,17 +48,32 @@
     font-style: italic;
 }
 
+/* Make CTA buttons fill the same row width whether there's 1 or 2 */
 .portfolio__item-cta {
-    display: flex;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between; /* space buttons evenly */
+  gap: 0.5rem;                     /* spacing between buttons */
 }
 
-.bizportfolio__item-cta {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
+.portfolio__item-cta .btn {
+  flex: 1;                         /* each button takes equal width */
+  text-align: center;              /* center text inside */
 }
+
+.portfolio__item-cta > a.btn {
+  flex: 1 1 0;            /* each button takes equal space */
+  display: flex;          /* center label nicely */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  white-space: nowrap;    /* prevent multi-line wrap making one taller/wider */
+}
+
+/* Optional: cap button height if labels get long */
+.portfolio__item-cta > a.btn {
+  min-height: 44px;       /* nice tap target */
+}
+
 
 /* ================ MEDIA QUERIES (MEDIUM DEVICES) ================= */
 @media screen and (max-width: 1024px) {

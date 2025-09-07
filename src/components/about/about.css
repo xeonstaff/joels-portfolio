@@ -63,10 +63,16 @@
     color: var(--color-light);
 }
 
+.about__text p {
+    font-size: 0.7rem;
+    text-align: left;
+}
+
 .about__content p {
     margin: 2rem 0 2.6rem;
     color: var(--color-light);
 }
+
 
 /* ================ MEDIA QUERIES (MEDIUM DEVICES) ================= */
 @media screen and (max-width: 1024px) {

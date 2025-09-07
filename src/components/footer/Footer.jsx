@@ -1,6 +1,6 @@
-import React from 'react'
+
 import './footer.css'
-import { FiLinkedin, FiInstagram } from 'react-icons/fi'
+import { BiLogoInstagramAlt, BiLogoLinkedinSquare, BiLogoTiktok } from "react-icons/bi";
 
 const Footer = () => {
   return (
@@ -16,8 +16,9 @@ const Footer = () => {
       </ul>
 
       <div className="footer__socials">
-        <a href="https://www.linkedin.com/in/joelmounts/"><FiLinkedin /></a>
-        <a href="https://www.instagram.com/joelexperience/"><FiInstagram /></a>
+        <a href="https://www.linkedin.com/in/joelmounts/"><BiLogoLinkedinSquare size={30} /></a>
+        <a href="https://www.instagram.com/joelexperience/"><BiLogoInstagramAlt size={30}  /></a>
+        <a href="https://www.tiktok.com/@joelexperienced"><BiLogoTiktok size={30} /></a>
       </div>
 
       <div className="footer__copyright">

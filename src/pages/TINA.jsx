@@ -1,64 +1,92 @@
 // src/pages/TINA.jsx
-import React, { useEffect, useState } from 'react';
-import Masonry from 'react-masonry-css';
-import Lightbox from 'yet-another-react-lightbox';
-import 'yet-another-react-lightbox/styles.css';
-import './TINA.css';
+import React, { useEffect, useMemo, useState } from "react";
+import Masonry from "react-masonry-css";
+import "./TINA.css";
 
-const importAll = (r) => r.keys().map(r);
+// Folders are numbered: 1, 2, 3, ...
+// Each folder has cover.webp and optional info.json { "caption": "..." }
+const coversCtx = require.context("../assets/tina", true, /cover\.webp$/);
+const infoCtx   = require.context("../assets/tina", true, /info\.json$/);
+
+function buildFolders() {
+  const covers = coversCtx.keys().map((k) => {
+    // k: "./1/cover.webp"
+    const slug = k.replace(/^\.\//, "").split("/")[0];
+    return { slug, coverSrc: coversCtx(k) };
+  });
+
+  const bySlug = new Map();
+  covers.forEach(({ slug, coverSrc }) => bySlug.set(slug, { slug, coverSrc }));
+
+  infoCtx.keys().forEach((k) => {
+    // k: "./1/info.json"
+    const slug = k.replace(/^\.\//, "").split("/")[0];
+    const data = infoCtx(k);
+    const caption =
+      (data && (data.caption || data.title || data.description)) || slug;
+    if (bySlug.has(slug)) {
+      bySlug.set(slug, { ...bySlug.get(slug), caption });
+    } else {
+      bySlug.set(slug, { slug, coverSrc: "", caption });
+    }
+  });
+
+  return Array.from(bySlug.values()).map((f) => ({
+    ...f,
+    caption: f.caption || f.slug,
+  }));
+}
 
 const TINA = () => {
-  const [images, setImages] = useState([]);
-  const [lightboxIndex, setLightboxIndex] = useState(-1);
+  const [folders, setFolders] = useState([]);
 
   useEffect(() => {
-    const imgs = importAll(
-      require.context('../assets/tina', false, /\.(png|jpe?g|webp|PNG|JPG|JPEG)$/)
-    ).map((src) => ({ src }));
-    setImages(imgs);
+    setFolders(buildFolders());
   }, []);
 
-  const breakpointColumnsObj = {
-    default: 3,
-    900: 2,
-    600: 1,
-  };
+  const breakpointColumnsObj = useMemo(
+    () => ({ default: 3, 900: 2, 600: 1 }),
+    []
+  );
 
   return (
-    <div className="p-4 w-full flex flex-col items-center">
-      <h1
-        className="title text-4xl font-bold text-gray-800 text-center w-full"
-        style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.2)' }}
-      >
-        this is not artprize.
-      </h1>
-      <p className="subtitle text-lg text-center text-gray-600 font-thin">
-        It’s connection.&nbsp;<a href="https://joelmounts.com/#contact" className="underline hover:text-black transition font-thin">Want some for your business?</a>
+    <div className="tina-page">
+      <h1 className="title">this is not artprize.</h1>
+      <p className="subtitle">
+        It’s connection.&nbsp;
+        <a href="/#contact" className="subtitle-link">
+          Want some for your business?
+        </a>
       </p>
-
 
       <Masonry
         breakpointCols={breakpointColumnsObj}
         className="my-masonry-grid mt-16"
         columnClassName="my-masonry-grid_column"
       >
-        {images.map((img, i) => (
-          <img
-            key={i}
-            src={img.src}
-            alt={`TINA-${i}`}
-            className="cursor-pointer w-full mb-4 rounded-md border border-gray-200 shadow-sm hover:shadow-md transition duration-200"
-            onClick={() => setLightboxIndex(i)}
-          />
-        ))}
-      </Masonry>
+        {folders
+          .sort((a, b) => Number(a.slug) - Number(b.slug))
+          .map(({ slug, coverSrc, caption }) => (
+            <a
+              key={slug}
+              href={`/tina/${slug}`}
+              className="gallery-item"
+              aria-label={`Open series ${caption}`}
+            >
+              {coverSrc ? (
+                <img
+                  src={coverSrc}
+                  alt={caption}
+                  loading="lazy"
+                />
+              ) : (
+                <div className="fallback-box" />
+              )}
 
-      <Lightbox
-        open={lightboxIndex >= 0}
-        close={() => setLightboxIndex(-1)}
-        index={lightboxIndex}
-        slides={images}
-      />
+              <div className="gallery-caption">{caption}</div>
+            </a>
+          ))}
+      </Masonry>
     </div>
   );
 };

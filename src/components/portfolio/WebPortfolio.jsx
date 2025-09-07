@@ -2,7 +2,7 @@ import React from 'react'
 import './portfolio.css'
 import debatetrack from '../../assets/projects/debatetrack.png'
 import daobloom from '../../assets/projects/daobloom.png'
-import ds from '../../assets/projects/ds.png'
+import electriclynx from '../../assets/projects/electriclynx.png'
 
 const data = [
   {
@@ -14,22 +14,22 @@ const data = [
     website: 'https://www.debatetrack.com/',
     youtube: 'https://www.youtube.com/debatetrack'
   },
-  {
-    id: 2,
-    image: daobloom,
-    title: 'Daobloom',
-    role: 'owner & operator',
-    description: 'A new education brand targeted at finding high-paying, high-impact jobs for High School students. Current focus is viral short-form and conversation Meta ads.',
-    website: 'https://www.daobloom.io/',
-    youtube: 'https://www.youtube.com/@daobloom'
-  },
+  // {
+  //   id: 2,
+  //   image: daobloom,
+  //   title: 'Daobloom',
+  //   role: 'owner & operator',
+  //   description: 'A new education brand targeted at finding high-paying, high-impact jobs for High School students. Current focus is viral short-form and conversation Meta ads.',
+  //   website: 'https://www.daobloom.io/',
+  //   youtube: 'https://www.youtube.com/@daobloom'
+  // },
   {
     id: 3,
-    image: ds,
-    title: "D's Barbershop",
-    role: 'webmaster',
-    description: "Dayton's premiere barbershop. \n Truly, the finest barbershop in the area.",
-    website: 'https://dsbarbershop.com/'
+    image: electriclynx,
+    title: "Electric Lynx",
+    role: 'owner & marketing operative',
+    description: "A digital marketing agency specializing in organic social + paid ads",
+    website: 'https://electriclynx.com/'
   }
 ]
 

@@ -1,46 +1,156 @@
-.my-masonry-grid {
-    display: -webkit-box; /* Not needed if using postcss/autoprefixer */
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: -16px; /* gutter size offset */
-    width: auto;
-  }
-  
-  .my-masonry-grid_column {
-    padding-left: 16px; /* gutter size */
-    background-clip: padding-box;
-  }
-  
-  /* Style individual items (images) */
-  .my-masonry-grid_column > img {
-    margin-bottom: 16px;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .my-masonry-grid_column > img:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  }
-  
+/* ====== Page basics ====== */
+.tina-page {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .title{
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #f1f5f9; /* light text on dark */
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,.35);
 }
 
 .subtitle{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
-    margin-top: -10px;
-    font-size: 14px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  margin-top: -10px;
+  font-size: 14px;
+  color: #cbd5e1;
+  text-align: center;
 }
 
-.ReactModal__Content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.subtitle-link{
+  text-decoration: underline;
+  color: inherit;
+}
+.subtitle-link:hover{
+  color: #ffffff;
+}
+
+/* ====== Masonry layout (existing) ====== */
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if using postcss/autoprefixer */
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -16px; /* gutter size offset */
+  width: auto;
+}
+
+.my-masonry-grid_column {
+  padding-left: 16px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Old direct-image rules kept for collection pages;
+   gallery-item adds its own rules below */
+.my-masonry-grid_column > img {
+  margin-bottom: 16px;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.my-masonry-grid_column > img:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+/* Make sure collection images keep natural aspect ratio (no forced height) */
+.my-masonry-grid .tina-img {
+  width: 100%;
+  height: auto !important;
+  object-fit: contain !important; /* don't crop portraits */
+}
+
+/* ====== Gallery tiles (TINA.jsx) ====== */
+.gallery-item {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 16px;
+  border: 1px solid #374151;       /* gray-700ish */
+  border-radius: 8px;
+  overflow: hidden;
+  background: #111827;             /* fallback */
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+  transition: box-shadow .2s ease;
+  text-decoration: none;
+}
+
+.gallery-item:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,.12);
+}
+
+.gallery-item img,
+.gallery-item .fallback-box {
+  display: block;
+  width: 100%;
+  height: auto;                    /* keep natural aspect ratio */
+}
+
+/* In case a fallback box is shown */
+.fallback-box {
+  aspect-ratio: 4 / 3;
+  background: #374151;
+}
+
+/* Darken the IMAGE ITSELF on hover (desktop) */
+.gallery-item img {
+  transition: filter .2s ease;
+}
+
+/* Desktop: only darken on hover */
+@media (min-width: 768px) {
+  .gallery-item:hover img {
+    filter: brightness(50%);
   }
-  
+}
+
+/* Mobile: keep image normal; caption is always visible (see below) */
+
+/* Caption pill (lower-left) */
+.gallery-caption {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  pointer-events: none;  /* don’t block clicks */
+  transition: opacity .2s ease;
+}
+
+/* Desktop: hide caption until hover */
+@media (min-width: 768px) {
+  .gallery-caption {
+    opacity: 0;
+  }
+  .gallery-item:hover .gallery-caption {
+    opacity: 1;
+  }
+}
+
+/* Mobile: always show caption (no hover on touch) */
+@media (max-width: 767px) {
+  .gallery-caption {
+    opacity: 1;
+  }
+}
+
+/* ====== Lightbox modal (kept from your CSS) ====== */
+.ReactModal__Content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
