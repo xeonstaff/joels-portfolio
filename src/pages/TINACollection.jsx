@@ -3,6 +3,7 @@ import React, { useMemo } from "react";
 import Masonry from "react-masonry-css";
 import "./TINA.css";
 import { useParams, Link } from "react-router-dom";
+import TopNoticeBar from "../components/TopNoticeBar/TopNoticeBar"
 
 // load all images; we’ll filter by folder (slug)
 const allImgCtx = require.context(
@@ -10,21 +11,24 @@ const allImgCtx = require.context(
   true,
   /\.(png|jpe?g|webp|PNG|JPG|JPEG)$/
 );
-// load captions
+// load captions + tags
 const infoCtx = require.context("../assets/tina", true, /info\.json$/);
 
-function getCaption(slug) {
+function getInfo(slug) {
   try {
     const data = infoCtx(`./${slug}/info.json`);
-    return data.caption || data.title || data.description || `Series ${slug}`;
+    const caption = data.caption || data.title || data.description || `Series ${slug}`;
+    // tags can be an array ["@a","@b"] or a string "@a, @b"
+    const tags = Array.isArray(data.tags) ? data.tags : data.tags || "";
+    return { caption, tags };
   } catch {
-    return `Series ${slug}`;
+    return { caption: `Series ${slug}`, tags: "" };
   }
 }
 
 const TINACollection = () => {
   const { slug } = useParams(); // "1", "2", ...
-  const title = getCaption(slug);
+  const { caption: title, tags } = getInfo(slug);
 
   const images = useMemo(() => {
     return allImgCtx
@@ -45,6 +49,9 @@ const TINACollection = () => {
 
   return (
     <div className="p-4 w-full flex flex-col items-center">
+      {/* Slide-down notice bar with tags */}
+      <TopNoticeBar variant="tags" tags={tags} delay={1000} />
+
       <h1 className="title text-3xl md:text-4xl font-bold text-gray-100 text-center w-full">
         {title}
       </h1>

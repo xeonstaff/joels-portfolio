@@ -1,7 +1,5 @@
-import React from 'react'
 import './portfolio.css'
 import debatetrack from '../../assets/projects/debatetrack.png'
-import daobloom from '../../assets/projects/daobloom.png'
 import electriclynx from '../../assets/projects/electriclynx.png'
 
 const data = [

@@ -26,10 +26,11 @@
     display: block;
     width: 80%;
     margin: 0.8rem auto 0;
+    font-size: 1rem;
 }
 
 .client__title {
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 200;
     margin: 0px;
     padding: 0px;

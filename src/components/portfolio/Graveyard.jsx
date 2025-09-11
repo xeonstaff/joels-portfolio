@@ -1,4 +1,3 @@
-import React from 'react'
 import './portfolio.css'
 import geopals from '../../assets/projects/geopals.png'
 import polibooks from '../../assets/projects/polibooks.png'
