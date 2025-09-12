@@ -1,5 +1,82 @@
-
-/* (Optional) If your page has a dark background, ensure links are visible */
+/* Keep your existing rule */
 .tina-page a.subtitle-link {
   text-decoration: underline;
+}
+
+/* --- Gallery overlay/caption styles --- */
+.gallery-item {
+  position: relative;
+  display: block;
+  overflow: hidden;           /* so the overlay doesn't spill */
+  border-radius: 6px;         /* optional nicety */
+}
+
+/* Make images fill their masonry cells */
+.gallery-item > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: filter .25s ease, transform .25s ease;
+}
+
+/* Darkening overlay (gradient so faces stay readable) */
+.gallery-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,.55) 0%,
+    rgba(0,0,0,.25) 35%,
+    rgba(0,0,0,0) 65%
+  );
+  opacity: 0;                 /* desktop default: off */
+  transition: opacity .25s ease;
+  pointer-events: none;
+}
+
+/* Caption: bottom-left on top of image */
+.gallery-caption {
+  position: absolute;
+  left: 12px;
+  right: 12px;                /* lets long titles wrap nicely */
+  bottom: 10px;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.2;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+  pointer-events: none;
+  opacity: 0;                 /* desktop default: hidden */
+  transform: translateY(6px);
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+/* Desktop reveal on hover/focus */
+.gallery-item:hover::before,
+.gallery-item:focus-visible::before,
+.gallery-item:hover .gallery-caption,
+.gallery-item:focus-visible .gallery-caption {
+  opacity: 1;
+}
+.gallery-item:hover .gallery-caption,
+.gallery-item:focus-visible .gallery-caption {
+  transform: translateY(0);
+}
+
+/* Mobile/tablet: always-on caption + darkening */
+@media (max-width: 900px) {
+  .gallery-item::before { opacity: 1; }
+  .gallery-caption {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .gallery-item > img,
+  .gallery-item::before,
+  .gallery-caption {
+    transition: none;
+  }
 }
