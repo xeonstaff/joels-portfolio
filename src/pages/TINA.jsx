@@ -27,6 +27,21 @@ function buildFolders() {
   return Array.from(bySlug.values()).map((f) => ({ ...f, caption: f.caption || f.slug }));
 }
 
+function parseSeriesKey(slug) {
+  const m = String(slug).match(/^(\d+)\s*([A-Za-z])?/);
+  const num = m ? parseInt(m[1], 10) : Number.POSITIVE_INFINITY;
+  const letterRank = m && m[2] ? m[2].toUpperCase().charCodeAt(0) : 0; // no letter comes before A
+  return { num, letterRank };
+}
+
+function sortBySeries(a, b) {
+  const A = parseSeriesKey(a.slug);
+  const B = parseSeriesKey(b.slug);
+  if (A.num !== B.num) return A.num - B.num;
+  if (A.letterRank !== B.letterRank) return A.letterRank - B.letterRank;
+  return a.slug.localeCompare(b.slug, undefined, { numeric: true, sensitivity: "base" });
+}
+
 const TINA = () => {
   const [folders, setFolders] = useState([]);
   useEffect(() => setFolders(buildFolders()), []);
@@ -48,7 +63,7 @@ const TINA = () => {
         columnClassName="my-masonry-grid_column"
       >
         {folders
-          .sort((a, b) => Number(a.slug) - Number(b.slug))
+          .sort(sortBySeries)
           .map(({ slug, coverSrc, caption }) => (
             <a key={slug} href={`/tina/${slug}`} className="gallery-item" aria-label={`Open series ${caption}`}>
               {coverSrc ? <img src={coverSrc} alt={caption} loading="lazy" /> : <div className="fallback-box" />}
