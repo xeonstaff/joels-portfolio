@@ -116,13 +116,6 @@ export default function TopNoticeBar({
   const content =
     variant === "home" ? (
       <>
-        <a 
-            className="line link" 
-            href="https://www.google.com/maps/d/u/0/edit?mid=10MuipRQ-aIahCTg_r92ldEDmz1mc_PE&usp=sharing" 
-            target="_blank" 
-            rel="noopener noreferrer">
-          <span>Find a full map <b>here</b>.</span>
-        </a>
         <a
           className="line link"
           href="https://instagram.com/joelexperience"
