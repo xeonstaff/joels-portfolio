@@ -33,7 +33,7 @@ const Portraits = () => {
         50mm portraits.
       </h1>
       <p className="subtitle text-lg text-center text-gray-600 font-thin">
-        by Joel.&nbsp;<a href="https://joelmounts.com/#contact" className="underline hover:text-black transition font-thin">Want some for your event?</a>
+        &nbsp;<a href="https://joelmounts.com/#contact" className="underline hover:text-black transition font-thin">Want some for your event?</a>
       </p>
 
 
